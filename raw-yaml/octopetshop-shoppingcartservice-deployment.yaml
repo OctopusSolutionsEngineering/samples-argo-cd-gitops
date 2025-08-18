@@ -16,7 +16,7 @@ spec:
         - name: shoppingcart
           #image: octopetshop_shoppingcartservice
           #imagePullPolicy: Never
-          image: octopussamples/octopetshop-shoppingcartservice
+          image: octopussamples/octopetshop-shoppingcartservice:1.0.25181.131235
           env:
             - name: OPSConnectionString
               valueFrom:
