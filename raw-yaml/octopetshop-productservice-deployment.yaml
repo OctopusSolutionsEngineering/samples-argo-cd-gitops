@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: productservice
-          image: octopussamples/octopetshop-productservice
+          image: octopussamples/octopetshop-productservice:1.0.25181.131235
           #image: octopetshop_productservice
           #imagePullPolicy: Never
           env:
