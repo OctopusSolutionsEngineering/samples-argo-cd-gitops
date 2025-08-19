@@ -8,7 +8,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/OctopusDeploy/samples-argo-cd-gitops.git
+    repoURL: https://github.com/OctopusSolutionsEngineering/samples-argo-cd-gitops.git
     targetRevision: HEAD
     path: octopub/manifests/test
   destination:
