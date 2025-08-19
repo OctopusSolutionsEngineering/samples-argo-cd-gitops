@@ -1,19 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: octopetshop-production
+  name: octopussamples-octopub-test
   annotations:
-    argo.octopus.com/project: "octopetshop"
-    argo.octopus.com/environment: "production"
+    argo.octopus.com/project: "octopub"
+    argo.octopus.com/environment: "test"
 spec:
   project: default
   source:
-     repoURL: https://github.com/OctopusDeploy/samples-argo-cd-gitops.git
-     targetRevision: HEAD
-     path: octopetshop/production
+    repoURL: https://github.com/OctopusDeploy/samples-argo-cd-gitops.git
+    targetRevision: HEAD
+    path: octopub/manifests/test
   destination:
     server: https://kubernetes.default.svc
-    namespace: production
+    namespace: test
   syncPolicy:
     automated:  
       prune: true
