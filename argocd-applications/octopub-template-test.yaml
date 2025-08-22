@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: octopussamples-octopub-template-test
+  annotations:
+    argo.octopus.com/project: "octopub-template"
+    argo.octopus.com/environment: "test"
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/OctopusSolutionsEngineering/samples-argo-cd-gitops.git
+    targetRevision: HEAD
+    path: octopub/manifests/test
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: template-test
+  syncPolicy:
+    automated:  
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - Validate=false
+    - CreateNamespace=true
