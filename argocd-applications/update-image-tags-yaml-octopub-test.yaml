@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/OctopusSolutionsEngineering/samples-argo-cd-gitops.git
     targetRevision: HEAD
-    path: update-image-tags-yaml-octopub/test/manifests
+    path: manifests/update-image-tags-yaml-octopub/test/
   destination:
     server: https://kubernetes.default.svc
     namespace: update-image-tags-yaml-octopub-test
