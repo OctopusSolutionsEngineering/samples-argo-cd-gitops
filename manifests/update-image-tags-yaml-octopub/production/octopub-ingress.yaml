@@ -5,7 +5,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: "octopussamples.update-image-tags-yaml-octopub-test.production"
+  - host: "update-image-tags-yaml-octopub-production"
     http:
       paths:
       - path: /api/audits
