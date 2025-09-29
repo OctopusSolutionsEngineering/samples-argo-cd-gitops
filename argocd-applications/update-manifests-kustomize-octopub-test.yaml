@@ -1,19 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: update-manifests-yaml-octopub-test
+  name: update-manifests-kustomize-octopub-test
   annotations:
-    argo.octopus.com/project: "update-manifests-yaml"
+    argo.octopus.com/project: "update-manifests-kustomize"
     argo.octopus.com/environment: "test"
 spec:
   project: default
   source:
     repoURL: https://github.com/OctopusSolutionsEngineering/samples-argo-cd-gitops.git
     targetRevision: HEAD
-    path: manifests/update-manifests-yaml-octopub/test/
+    path: manifests/update-manifests-kustomize-octopub/test/
   destination:
     server: https://kubernetes.default.svc
-    namespace: update-manifests-yaml-octopub-test
+    namespace: update-manifests-kustomize-octopub-test
   syncPolicy:
     automated:  
       prune: true

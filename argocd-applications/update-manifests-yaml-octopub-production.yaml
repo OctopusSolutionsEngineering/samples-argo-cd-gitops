@@ -13,7 +13,7 @@ spec:
     path: manifests/update-manifests-yaml-octopub/production/
   destination:
     server: https://kubernetes.default.svc
-    namespace: update-image-manifests-octopub-production
+    namespace: update-manifests-yaml-octopub-production
   syncPolicy:
     automated:  
       prune: true
