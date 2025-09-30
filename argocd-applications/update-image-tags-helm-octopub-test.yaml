@@ -5,6 +5,7 @@ metadata:
   annotations:
     argo.octopus.com/project: "update-image-tags-helm"
     argo.octopus.com/environment: "test"
+    argo.octopus.com/image-replace-paths.values: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
 spec:
   project: default
   sources:
@@ -17,6 +18,9 @@ spec:
     - repoURL: https://github.com/OctopusSolutionsEngineering/samples-argo-cd-gitops.git
       targetRevision: HEAD
       ref: values
+    - repoURL: https://github.com/OctopusSolutionsEngineering/samples-argo-cd-gitops.git
+      targetRevision: HEAD
+      path: manifests/update-image-tags-helm-octopub/test/values
   destination:
     server: https://kubernetes.default.svc
     namespace: update-image-tags-helm-octopub-test
