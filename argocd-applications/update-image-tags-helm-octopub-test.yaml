@@ -13,11 +13,10 @@ spec:
       path: manifests/update-image-tags-helm-octopub/test/chart
       helm:
         valueFiles:
-          - values.yaml
+          - $values/manifests/update-image-tags-helm-octopub/test/values/values.yaml
     - repoURL: https://github.com/OctopusSolutionsEngineering/samples-argo-cd-gitops.git
       targetRevision: HEAD
-      path: manifests/update-image-tags-helm-octopub/test/values
-      ref: proj-values
+      ref: values
   destination:
     server: https://kubernetes.default.svc
     namespace: update-image-tags-helm-octopub-test
