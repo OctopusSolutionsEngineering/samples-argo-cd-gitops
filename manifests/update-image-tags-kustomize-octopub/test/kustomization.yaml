@@ -24,5 +24,4 @@ configMapGenerator:
 
 images:
   - name: octopussamples/octopub-products-microservice
-    newName: ghcr.io/octopussamples/octopub-products-microservice
-    newTag: latest
+    newName: octopussamples/octopub-products-microservice
