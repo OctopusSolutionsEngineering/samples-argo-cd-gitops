@@ -1,0 +1,30 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: update-image-tags-helm-octopub-test
+  annotations:
+    argo.octopus.com/project: "update-image-tags-helm"
+    argo.octopus.com/environment: "test"
+spec:
+  project: default
+  sources:
+    - repoURL: https://github.com/OctopusSolutionsEngineering/samples-argo-cd-gitops.git
+      targetRevision: HEAD
+      path: manifests/update-image-tags-helm-octopub/test/chart
+      helm:
+        valueFiles:
+          - $proj-values/values.yaml
+    - repoURL: https://github.com/OctopusSolutionsEngineering/samples-argo-cd-gitops.git
+      targetRevision: HEAD
+      path: manifests/update-image-tags-helm-octopub/test/values
+      ref: proj-values
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: update-image-tags-helm-octopub-test
+  syncPolicy:
+    automated:  
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - Validate=false
+    - CreateNamespace=true
