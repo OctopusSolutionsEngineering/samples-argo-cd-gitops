@@ -13,7 +13,7 @@ spec:
       path: manifests/update-image-tags-helm-octopub/test/chart
       helm:
         valueFiles:
-          - $proj-values/values.yaml
+          - values.yaml
     - repoURL: https://github.com/OctopusSolutionsEngineering/samples-argo-cd-gitops.git
       targetRevision: HEAD
       path: manifests/update-image-tags-helm-octopub/test/values
