@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: auditservice
-          image: octopussamples/octopub-audit-microservice
+          image: #{Octopus.Action.Package[octopub-audit-microservice].PackageId}:#{Octopus.Action.Package[octopub-audits-microservice].PackageVersion}
           ports:
             - name: http-audit
               containerPort: 10000
