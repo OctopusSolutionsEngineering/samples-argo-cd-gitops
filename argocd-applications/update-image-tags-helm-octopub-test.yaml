@@ -5,7 +5,7 @@ metadata:
   annotations:
     argo.octopus.com/project.helm-source: "update-image-tags-helm"
     argo.octopus.com/environment.helm-source: "test"
-    argo.octopus.com/image-replace-paths.values-source: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+    argo.octopus.com/image-replace-paths.values: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
 spec:
   project: default
   sources:
