@@ -4,7 +4,7 @@ metadata:
   name: update-manifests-yaml-octopub-development
   annotations:
     argo.octopus.com/project: "update-manifests-yaml"
-    argo.octopus.com.environment: "development"
+    argo.octopus.com/environment: "development"
 spec:
   project: default
   source:
