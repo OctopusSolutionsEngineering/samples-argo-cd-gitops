@@ -58,7 +58,7 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: update-manifests-helm-octopub-test
+    - host: update-manifests-helm-octopub-security
       paths:
         - path: /api/products
           pathType: Prefix
