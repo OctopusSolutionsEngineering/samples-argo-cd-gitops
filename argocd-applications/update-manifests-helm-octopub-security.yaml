@@ -1,19 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: update-manifests-helm-octopub-production
+  name: update-manifests-helm-octopub-security
   annotations:
     argo.octopus.com/project: "update-manifests-helm"
-    argo.octopus.com/environment: "production"
+    argo.octopus.com/environment: "security"
 spec:
   project: default
   source:
     repoURL: https://github.com/OctopusSolutionsEngineering/samples-argo-cd-gitops.git
     targetRevision: HEAD
-    path: manifests/update-manifests-helm-octopub/production/
+    path: manifests/update-manifests-helm-octopub/security/
   destination:
     server: https://kubernetes.default.svc
-    namespace: update-manifests-helm-octopub-production
+    namespace: update-manifests-helm-octopub-security
   syncPolicy:
     automated:  
       prune: true

@@ -1,19 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: update-manifests-yaml-octopub-production
+  name: update-manifests-yaml-octopub-security
   annotations:
     argo.octopus.com/project: "update-manifests-yaml"
-    argo.octopus.com/environment: "production"
+    argo.octopus.com/environment: "security"
 spec:
   project: default
   source:
     repoURL: https://github.com/OctopusSolutionsEngineering/samples-argo-cd-gitops.git
     targetRevision: HEAD
-    path: manifests/update-manifests-yaml-octopub/production/
+    path: manifests/update-manifests-yaml-octopub/security/
   destination:
     server: https://kubernetes.default.svc
-    namespace: update-manifests-yaml-octopub-production
+    namespace: update-manifests-yaml-octopub-security
   syncPolicy:
     automated:  
       prune: true
