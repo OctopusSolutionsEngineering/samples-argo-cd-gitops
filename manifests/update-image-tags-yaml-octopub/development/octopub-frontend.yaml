@@ -17,4 +17,4 @@ spec:
           image: ghcr.io/octopussolutionsengineering/octopub-frontend:20251006.452.1
           ports:
             - containerPort: 8080
-              name: http-port 
+              name: http-port
