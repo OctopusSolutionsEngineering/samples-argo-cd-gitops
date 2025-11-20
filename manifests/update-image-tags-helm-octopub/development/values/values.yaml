@@ -8,7 +8,7 @@ image:
   repository: ghcrfacade-a6awccayfpcpg4cg.eastus-01.azurewebsites.net/octopub-products-microservice
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "1.0"
 
 database:
   migrateOnStartup: true
