@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: web
-          image: octopussamples/octopub-frontend:20251118.468.1
+          image: ghcrfacade-a6awccayfpcpg4cg.eastus-01.azurewebsites.net/octopub-frontend:20251118.468.1
           ports:
             - containerPort: 8080
               name: http-port

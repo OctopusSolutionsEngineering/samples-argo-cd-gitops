@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: productservice
-          image: octopussamples/octopub-products-microservice:20251118.508.1
+          image: ghcrfacade-a6awccayfpcpg4cg.eastus-01.azurewebsites.net/octopub-products-microservice:20251118.508.1
           ports:
             - name: http-product
               containerPort: 8083
