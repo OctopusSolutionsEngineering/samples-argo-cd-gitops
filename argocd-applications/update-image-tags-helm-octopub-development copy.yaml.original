@@ -3,13 +3,9 @@ kind: Application
 metadata:
   name: update-image-tags-helm-octopub-development
   annotations:
-metadata:
-  annotations:
-    argo.octopus.com/project.helm-source: "update-image-tags-helm"
-    argo.octopus.com/environment.helm-source: "development"
-    argo.octopus.com/image-replace-paths.helm-source: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
     argo.octopus.com/project.values-source: "update-image-tags-helm"
     argo.octopus.com/environment.values-source: "development"
+    argo.octopus.com/image-replace-paths.helm-source: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
 spec:
   project: default
   sources:
