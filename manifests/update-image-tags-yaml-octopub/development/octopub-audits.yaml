@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: auditservice
-          image: ghcrfacade-a6awccayfpcpg4cg.eastus-01.azurewebsites.net/octopub-audit-microservice:20251117.494.1
+          image: ghcrfacade-a6awccayfpcpg4cg.eastus-01.azurewebsites.net/octopussolutionsengineering/octopub-audit-microservice:20251117.494.1
           ports:
             - name: http-audit
               containerPort: 10000
