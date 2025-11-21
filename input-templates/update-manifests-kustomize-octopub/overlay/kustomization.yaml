@@ -24,5 +24,5 @@ configMapGenerator:
 
 images:
   - name: octopussamples/octopub-products-microservice
-    newName: #{Octopus.Action.Package[octopub-products-microservice].PackageId}
+    newName: #{Octopus.Action.Package[octopub-products-microservice].Registry}/#{Octopus.Action.Package[octopub-products-microservice].PackageId}
     newTag: #{Octopus.Action.Package[octopub-products-microservice].PackageVersion}
