@@ -23,6 +23,6 @@ configMapGenerator:
     env: variables.properties
 
 images:
-  - name: octopussamples/octopub-products-microservice
+  - name: ghcrfacade-a6awccayfpcpg4cg.eastus-01.azurewebsites.net/octopussolutionsengineering/octopub-products-microservice
     newName: "#{Octopus.Action.Package[octopub-products-microservice].Registry}/#{Octopus.Action.Package[octopub-products-microservice].PackageId}"
     newTag: #{Octopus.Action.Package[octopub-products-microservice].PackageVersion}
