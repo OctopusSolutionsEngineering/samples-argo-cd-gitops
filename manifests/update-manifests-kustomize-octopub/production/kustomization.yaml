@@ -25,4 +25,4 @@ configMapGenerator:
 images:
   - name: ghcrfacade-a6awccayfpcpg4cg.eastus-01.azurewebsites.net/octopussolutionsengineering/octopub-products-microservice
     newName: "ghcrfacade-a6awccayfpcpg4cg.eastus-01.azurewebsites.net/octopussolutionsengineering/octopub-products-microservice"
-    newTag: 20251120.530.1
+    newTag: 20251120.525.1
