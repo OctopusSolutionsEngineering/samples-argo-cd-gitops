@@ -25,4 +25,4 @@ configMapGenerator:
 images:
   - name: octopussamples/octopub-products-microservice
     newName: octopussolutionsengineering/octopub-products-microservice
-    newTag: 20251120.530.1
+    newTag: 20251121.539.1
